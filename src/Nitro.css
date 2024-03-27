@@ -113,6 +113,7 @@ img {
     margin-right: 1.6rem;
     line-height: 1.8;
 }
+
 .row {
     display: grid;
     grid-template-columns: repeat(var(--num-of-grid-columns), 1fr);
@@ -150,6 +151,7 @@ img {
     border-radius: 10px;
     padding: 20px;
 }
+
 .box-2 {
     margin: 24px 10px;
     background-color: yellow;
@@ -157,7 +159,8 @@ img {
     border-radius: 10px;
     padding: 20px;
 }
-h2{
+
+h2 {
     font-size: 42px;
 }
 
@@ -168,10 +171,19 @@ h2{
 .card-2 {
     width: 50%;
 }
-.info{
-    text-align: left;
-    padding-left: 10%;
+
+.list {
+    margin-top: 20px;
+    margin-left: 20px;
 }
+
+.info {
+    text-align: left;
+    list-style: none;
+    color: #23272A;
+    margin-top: 4px;
+}
+
 .buy {
     margin: 12px;
     font-size: 16px;
@@ -186,45 +198,6 @@ h2{
 .buy:hover {
     background-color: var(--brand-clr);
 }
-.list{
-    list-style-type: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* FOOTER  */
 .main-footer {
