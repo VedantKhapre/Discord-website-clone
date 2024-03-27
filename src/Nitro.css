@@ -186,7 +186,9 @@ h2{
 .buy:hover {
     background-color: var(--brand-clr);
 }
-
+.list{
+    list-style-type: none;
+}
 
 
 
