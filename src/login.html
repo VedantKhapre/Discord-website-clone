@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="./Login.css">
+    <link rel="stylesheet" href="./login.css">
 </head>
 
 <body>
-    <section>
+    <section class="hero">
         <header>
             <div class="list">
                 <nav class="main-nav">
@@ -37,18 +37,16 @@
 
     <div class="container">
         <form action="#" method="post">
-            <h2>LOGIN</h2>
+            <h2>Welcome Back</h2>
+            <h3>We're so excited to see you again!</h3>
             <label for="fullname">Username</label>
             <input type="text" id="fullname" name="fullname" required>
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
 
-            <a href="./SignUp.html" class="New-link">Create New Account ?</a>
-
-            <div class="submit">
-                <input type="submit" value="Login">
-            </div>
+           <p>Need an Account? <a href="./SignUp.html" class="New-link">Register</a></p>
+                <input type="submit" value="Log In">
         </form>
     </div>
 </body>
