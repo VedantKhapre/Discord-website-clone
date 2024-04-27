@@ -43,15 +43,6 @@ body {
     text-decoration: underline;
 }
 
-.New-link {
-    color: blue;
-    text-decoration: none; 
-    display: inline-block;
-}
-.New-link:hover {
-    color: red;
-    text-decoration: underline;
-}
 
 
 .container {
