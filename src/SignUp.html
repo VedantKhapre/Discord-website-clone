@@ -5,66 +5,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="./SignUp.css">
+    <link rel="stylesheet" href="./login.css">
 </head>
 
 <body>
-    <section>
+    <section class="hero">
         <header>
-        <div class="list">
-            <nav class="main-nav">
-
-                <ul class="nav-list">
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Downloads</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Why Discord</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="./Nitro.html" class="nav-link">Nitro</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Safety</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Support</a>
-                    </li>
-
-                </ul>
-            </nav>
-        </div>
-    </header>
+            <div class="list">
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Why Discord</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./Nitro.html" class="nav-link">Nitro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Safety</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
     </section>
 
     <div class="container">
-<div>
         <form action="#" method="post">
-            <h2>SIGN UP</h2>
+            <h2>Create an Account</h2>
+            <h3>We're so excited to see you again!</h3>
+
+            <label for="Email">Email</label>
+            <input type="text" id="Email" name="Email" required>
+
             <label for="fullname">Username</label>
             <input type="text" id="fullname" name="fullname" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
 
-            <label for="password">Confirm Password</label>
-            <input type="password" id="confirm password" name="password" required>
+            <label for="ConfirmPassword">Confirm Password</label>
+            <input type="password" id="ConfirmPassword" name="ConfirmPassword" required>
 
-            <div class="submit">
-                <input type="submit" value="Sign Up">
+            <div class="container-2">
+                <label for="day">Day:</label>
+                <select id="day" name="dd"></select>
+
+                <label for="month">Month:</label>
+                <select id="month" name="mm" onchange="change_month(this)">
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+
+                <label for="year">Year:</label>
+                <select id="year" name="yyyy" onchange="change_year(this)"></select>
             </div>
+
+            <a href="./Login.html" class="New-link">Already have an Account ?</a></p>
+           
+            <input type="submit" value="Sign Up">
 
         </form>
     </div>
-</div>
+
+    <script>
+        // Function to generate years from 1998 to 2006
+        function generateYears() {
+            var yearDropdown = document.getElementById("year");
+            for (var i = 1998; i <= 2006; i++) {
+                var option = document.createElement("option");
+                option.text = i;
+                option.value = i;
+                yearDropdown.add(option);
+            }
+        }
+
+        // Function to generate days based on selected month and year
+        function generateDays() {
+            var year = document.getElementById("year").value;
+            var month = document.getElementById("month").value;
+            var daysInMonth = new Date(year, month, 0).getDate(); // Get number of days in the selected month
+            var dayDropdown = document.getElementById("day");
+            dayDropdown.innerHTML = ""; // Clear existing options
+            for (var i = 1; i <= daysInMonth; i++) {
+                var option = document.createElement("option");
+                option.text = i;
+                option.value = (i < 10 ? '0' : '') + i; // Add leading zero if needed
+                dayDropdown.add(option);
+            }
+        }
+
+        // Generate years initially and then generate days based on initial selection
+        generateYears();
+        generateDays();
+    </script>
+
 </body>
 
 </html>

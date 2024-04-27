@@ -14,8 +14,9 @@
 }
 
 body {
-    font-family: Whitney Medium, sans-serif;
+    font-family: 'Whitney Medium', sans-serif;
     background: url("./assets/images/loginHero.png") center/cover;
+    margin-bottom: 100px;
 }
 
 .main-nav {
@@ -26,7 +27,6 @@ body {
 }
 
 .nav-list {
-
     display: flex;
     list-style: none;
 }
@@ -54,7 +54,6 @@ body {
     text-decoration: underline;
 }
 
-
 .container {
     background-color: #313338;
     padding: 30px;
@@ -64,8 +63,15 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 50px;
     color: white;
+}
+
+.container-2 {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
 }
 
 h2 {
@@ -94,14 +100,24 @@ label {
     font-weight: lighter;
     color: #B5BAC0;
     margin-bottom: 10px;
-
 }
 
 input {
     padding: 10px;
     margin-bottom: 20px;
+    border-radius: 3px;
     border: 1px solid #313338;
     font-size: 16px;
+    background-color: #1E1F22;
+    color: white;
+}
+
+select {
+    padding: 5px;
+    border: 1px solid #313338;
+    font-size: 16px;
+    background-color: #1E1F22;
+    color: white;
 }
 
 .submit {
@@ -110,8 +126,7 @@ input {
     margin-bottom: 20px;
     font-size: 16px;
     border: 1px;
-    border-radius: px;
-
+    border-radius: 3px;
 }
 
 input[type="submit"] {
