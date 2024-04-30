@@ -1,3 +1,29 @@
+<?php
+$showAlert = false;
+$showError = false;
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    include 'dbconnect.php';
+    $Email = $_POST["Email"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $cpassword = $_POST["cpassword"];
+    $exists=false;
+    if(($password == $cpassword) && $exists==false){
+        $sql = "INSERT INTO userdb ( Email, username, password, dt) VALUES ('$Email','$username', '$password', current_timestamp())";
+        $result = mysqli_query($conn, $sql);
+        if ($result){
+            $showAlert = true;
+            header("Location: ./login.php");
+            exit();
+        }
+    }
+    else{
+        $showError = "Passwords do not match";
+    }
+}
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +35,24 @@
 </head>
 
 <body>
+    <?php
+    if($showAlert){
+    echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> Your account is now created and you can login
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div> ';
+    }
+    if($showError){
+    echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error!</strong> '. $showError.'
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div> ';
+    }
+    ?>
     <section class="hero">
         <header>
             <div class="list">
@@ -36,21 +80,21 @@
     </section>
 
     <div class="container">
-        <form action="#" method="post">
+        <form action="SignUp.php" method="post">
             <h2>Create an Account</h2>
             <h3>We're so excited to see you again!</h3>
 
             <label for="Email">Email</label>
             <input type="text" id="Email" name="Email" required>
 
-            <label for="fullname">Username</label>
-            <input type="text" id="fullname" name="fullname" required>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" aria-describedby="emailHelp" required>
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
 
-            <label for="ConfirmPassword">Confirm Password</label>
-            <input type="password" id="ConfirmPassword" name="ConfirmPassword" required>
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" id="cpassword" name="cpassword" required>
 
             <div class="container-2">
                 <label for="day">Day:</label>
@@ -76,7 +120,7 @@
                 <select id="year" name="yyyy" onchange="change_year(this)"></select>
             </div>
 
-            <a href="./Login.html" class="New-link">Already have an Account ?</a></p>
+            <a href="./login.php" class="New-link">Already have an Account ?</a></p>
            
             <input type="submit" value="Sign Up">
 
@@ -109,7 +153,6 @@
                 dayDropdown.add(option);
             }
         }
-
         // Generate years initially and then generate days based on initial selection
         generateYears();
         generateDays();

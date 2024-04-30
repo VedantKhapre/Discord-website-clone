@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Whitney Light';
+    src: url('./assets/fonts/whitneylight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Whitney Medium';
+    src: url('./assets/fonts/whitneymedium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Whitney Bold';
+    src: url('./assets/fonts/whitneybold.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+
+body {
+    font-size: var(--general-font-size);
+    font-family: var(--main-font-family-light);
+}
+
+:root {
+    --light-clr: #FFF;
+    --dark-clr: #23272A;
+    --brand-clr: #7289DA;
+    --off-white-clr: #D3D3D3;
+    --general-font-size: 2rem;
+    --primary-title-font-size: 4.8rem;
+    --secondary-title-font-size: 4rem;
+    --main-font-family-light: 'Whitney Light', sans-serif;
+    --main-font-family-medium: 'Whitney Medium', sans-serif;
+    --main-font-family-bold: 'Whitney Bold', sans-serif;
+    --num-of-grid-columns: 4;
+    --section-spacing: 5.6rem 2.4rem;
+    --container-width: 126rem;
+}
+
+.nitro-cards{
+    display: flex;
+    justify-content: center;
+}
+.list{
+    list-style:none;
+}
+
+.card-1{
+    margin: 24px 24px;
+    padding: 30px;
+    background-color: #7289DA;
+    border-radius: 8px;
+} 
+
+.card-2{
+    margin: 24px 24px;
+    padding: 30px;
+    background-color: #23272A;
+    border-radius: 8px;
+}
+
+.box-1{
+    margin: 5px;
+    margin-bottom: 75px;
+    padding: 5px;
+}
+.box-2{
+    margin: 5px;
+    padding: 5px;
+}
+
+.price{
+    margin: 10px 10px 20px 0px;
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.info{
+    margin: 8px;
+}
+
+.subscribe{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #313338;
+    font-size: 16px;
+    background-color: #313338;
+    color: white;
+}
+.subscribe:hover{
+     background-color: black;
+}

@@ -47,7 +47,7 @@
                 </ul>
 
                 <div class="nav-items-right">
-                    <a href="./login.html" class="btn btn-small btn-light btn-login">Login</a>
+                    <a href="./login.php" class="btn btn-small btn-light btn-login">Login</a>
                     <span class="mobile-toggle">
                         <i class="bx bx-menu btn-open"></i>
                         <i class="bx bx-x btn-close"></i>
@@ -70,11 +70,8 @@
                 </p>
 
                 <div class="hero-btn-group">
-                    <a href="#" class="btn btn-large btn-light">
-                        <i class="bx bx-download"></i> Download for Linux
-                    </a>
-                    <a href="#" class="btn btn-large btn-dark">
-                        Open Discord in your browser
+                    <a href="#" id="downloadButton" class="btn btn-large btn-dark">
+                        <i class="bx bx-download"></i> Download Report
                     </a>
 
                 </div>
@@ -164,8 +161,8 @@
         <div class="row-container remove-grid">
             <img src="./assets/images/sparkles.svg" alt="" class="sparkles">
             <h2>Ready to start your journey?</h2>
-            <a href="#" class="btn btn-large btn-brand">
-                <i class="bx bx-download"></i> Download for Linux
+            <a href="#" id="downloadButton" class="btn btn-large btn-brand">
+                <i class="bx bx-download"></i> Download Report
             </a>
         </div>
     </section>
@@ -257,6 +254,28 @@
         </div>
 
     </footer>
+
+    <script>
+        document.getElementById("downloadButton").addEventListener("click", function () {
+            // Create an anchor element
+            var downloadAnchor = document.createElement('a');
+
+            // Set the href attribute to the path of your .docx file
+            downloadAnchor.href = './Report.docx';
+
+            // Set the download attribute to specify the default filename
+            downloadAnchor.download = 'Report.docx';
+
+            // Append the anchor element to the body
+            document.body.appendChild(downloadAnchor);
+
+            // Trigger a click event on the anchor element
+            downloadAnchor.click();
+
+            // Clean up: remove the anchor element
+            document.body.removeChild(downloadAnchor);
+        });
+    </script>
 
 </body>
 

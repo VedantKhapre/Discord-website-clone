@@ -118,7 +118,7 @@ img {
     display: grid;
     grid-template-columns: repeat(var(--num-of-grid-columns), 1fr);
     gap: 0 2rem;
-    padding: var(--section-spacing);
+    padding: 20px;
 }
 
 .hero-content-wrap {
@@ -140,63 +140,60 @@ img {
     margin-top: 2.4rem;
 }
 
-.nitro-cards {
+.nitro-cards{
     display: flex;
+    justify-content: center;
+}
+.list{
+    list-style:none;
 }
 
-.box-1 {
-    margin: 24px 10px;
-    background-color: lemonchiffon;
-    color: var(--brand-clr);
-    border-radius: 10px;
-    padding: 38px;
+.card-1{
+    margin: 20px 24px 60px 24px;
+    padding: 30px;
+    background-color: #B8B8FF;
+    border-radius: 8px;
+} 
+
+.card-2{
+    margin: 20px 24px 60px 24px;
+    padding: 30px;
+    background-color: #9381FF;
+    border-radius: 8px;
 }
 
-.box-2 {
-    margin: 24px 10px;
-    background-color: yellow;
-    color: var(--brand-clr);
-    border-radius: 10px;
-    padding: 20px;
+.box-1{
+    margin: 5px;
+    margin-bottom: 75px;
+    padding: 5px;
+}
+.box-2{
+    margin: 5px;
+    padding: 5px;
 }
 
-h2 {
-    font-size: 42px;
+.price{
+    margin: 10px 10px 20px 0px;
+    font-size: 4rem;
+    font-weight: bolder;
 }
 
-.card-1 {
-    width: 50%;
+.info{
+    margin: 8px 0px;
 }
 
-.card-2 {
-    width: 50%;
-}
-
-.list {
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-.info {
-    text-align: left;
-    list-style: none;
-    color: #23272A;
-    margin-top: 4px;
-}
-
-.buy {
-    margin: 12px;
+.subscribe{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #313338;
     font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    background-color: grey;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: black;
+    color: white;
 }
-
-.buy:hover {
-    background-color: var(--brand-clr);
+.subscribe:hover{
+     background-color: #313338;
 }
 
 /* FOOTER  */
