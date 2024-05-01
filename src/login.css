@@ -15,7 +15,7 @@
 
 body {
     font-family: 'Whitney Medium', sans-serif;
-    background: url("./assets/images/loginHero.png") center/cover;
+    background: url("./assets/images/loginimg.png") center/cover;
     margin-bottom: 100px;
 }
 
@@ -33,7 +33,7 @@ body {
 
 .nav-link {
     font-size: 16px;
-    color: #fff;
+    color: #1E1F22;
     margin: 0 1rem;
     padding: 1rem;
     font-weight: bold;
