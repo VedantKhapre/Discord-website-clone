@@ -77,7 +77,7 @@
                         <li class="info"> 📛 Nitro badge on your profile</li>
                     </ul>
                 </div>
-                <button class="subscribe">Subscribe</button>
+                <button class="subscribe" onclick="buyItem()">Subscribe</button>
             </div>
 
             <div class="card-2">
@@ -93,12 +93,12 @@
                         <li class="info"> 👾 Custom profiles and more!</li>
                     </ul>
                 </div>
-                <button class="subscribe">Subscribe</button>
+                <button class="subscribe" onclick="buyItem()">Subscribe</button>
             </div>
 
 
-
     </section>
+    <p>You have <span id="pointsDisplay">0</span> points. <button onclick="earnPoints()">Earn 1000 Points</button></p>
     <footer class="main-footer">
         <div class="row container">
             <div class="info-box">
@@ -186,3 +186,5 @@
 
         </div>
     </footer>
+    <script src="nitro.js"></script>
+</body>
