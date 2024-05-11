@@ -1,21 +1,21 @@
 @font-face {
     font-family: 'Whitney Light';
-    src: url('./assets/fonts/whitneylight.woff') format('woff');
+    src: url('../assets/fonts/whitneylight.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Whitney Medium';
-    src: url('./assets/fonts/whitneymedium.woff') format('woff');
+    src: url('../assets/fonts/whitneymedium.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Whitney Bold';
-    src: url('./assets/fonts/whitneybold.woff') format('woff');
+    src: url('../assets/fonts/whitneybold.woff') format('woff');
 }
 
 body {
     font-family: 'Whitney Medium', sans-serif;
-    background: url("./assets/images/prank.png") center/cover;
+    background: url("../assets/images/prank.png") center/cover;
     margin-bottom: 100px;
 }
 

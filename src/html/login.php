@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
-            header("location: index.html");
+            header("location: ./index.html");
         } else {
             $showError = "Invalid Credentials";
         }
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 
 <body>

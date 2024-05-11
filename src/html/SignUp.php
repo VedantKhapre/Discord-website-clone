@@ -1,28 +1,45 @@
 <?php
 $showAlert = false;
 $showError = false;
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include 'dbconnect.php';
     $Email = $_POST["Email"];
     $username = $_POST["username"];
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
-    $exists=false;
-    if(($password == $cpassword) && $exists==false){
+    $exists = false;
+    if (($password == $cpassword) && $exists == false) {
         $sql = "INSERT INTO userdb ( Email, username, password, dt) VALUES ('$Email','$username', '$password', current_timestamp())";
         $result = mysqli_query($conn, $sql);
-        if ($result){
+        if ($result) {
             $showAlert = true;
             header("Location: ./login.php");
             exit();
         }
-    }
-    else{
+    } else {
         $showError = "Passwords do not match";
     }
 }
-    
+
+if ($showAlert) {
+    echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> Your account is now created and you can login
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
+</div> ';
+}
+if ($showError) {
+    echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Error!</strong> ' . $showError . '
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
+</div> ';
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,28 +48,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 
 <body>
-    <?php
-    if($showAlert){
-    echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success!</strong> Your account is now created and you can login
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-    </div> ';
-    }
-    if($showError){
-    echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Error!</strong> '. $showError.'
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-    </div> ';
-    }
-    ?>
+
     <section class="hero">
         <header>
             <div class="list">
@@ -121,7 +121,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
 
             <a href="./login.php" class="New-link">Already have an Account ?</a></p>
-           
+
             <input type="submit" value="Sign Up">
 
         </form>

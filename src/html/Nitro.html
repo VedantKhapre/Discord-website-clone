@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nitro</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/Nitro.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.svg">
+</head>
+
+<body>
+    <section class="hero">
+        <header class="main-header container">
+
+            <nav class="main-nav">
+                <a href="index.html" class="logo">
+                    <img src="../assets/images/logo.svg" alt="">
+                </a>
+
+                <ul class="nav-list">
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Downloads</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="Nitro.html" class="nav-link">Nitro</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="Discover.html" class="nav-link">Discover</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="Safety.html" class="nav-link">Safety</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="About.html" class="nav-link">About</a>
+                    </li>
+
+                </ul>
+
+                <div class="nav-items-right">
+                    <a href="./login.php" class="btn btn-small btn-light btn-login">Login</a>
+
+                </div>
+
+            </nav>
+
+        </header>
+
+        <div class="row container">
+
+            <div class="hero-content-wrap">
+                <h1 class="title primary-title">Unleash more fun with Nitro</h1>
+                <p class="hero-description">
+                    Subscribe to Nitro to upgrade your emoji,
+                    personalize your profile, share bigger files,
+                    and so much more.
+                </p>
+            </div>
+        </div>
+        <div class="nitro-cards">
+            <div class="card-1">
+                <div class="box-1">
+                    <h1>Nitro Basic</h1>
+                    <div class="price">$9.99</div>
+                    <ul class="list">
+                        <li class="info"> ⬇️ 50MB uploads</li>
+                        <li class="info"> 😎 Custom emoji anywhere</li>
+                        <li class="info"> 🤷‍♀️ Unlimited Super Reactions</li>
+                        <li class="info"> 📛 Nitro badge on your profile</li>
+                    </ul>
+                </div>
+                <button class="subscribe" onclick="buyItem()">Subscribe</button>
+            </div>
+
+            <div class="card-2">
+                <div class="box-2">
+                    <h1>Nitro</h1>
+                    <div class="price">$17.99</div>
+                    <ul class="list">
+                        <li class="info"> ⬇️ 500MB uploads</li>
+                        <li class="info"> 😎 Custom emoji anywhere</li>
+                        <li class="info"> 🤷‍♀️ Unlimited Super Reactions</li>
+                        <li class="info"> 🎬 HD video streaming</li>
+                        <li class="info"> 🔥2 Server Boosts</li>
+                        <li class="info"> 👾 Custom profiles and more!</li>
+                    </ul>
+                </div>
+                <button class="subscribe" onclick="buyItem()">Subscribe</button>
+            </div>
+
+
+    </section>
+    <p>You have <span id="pointsDisplay">0</span> points. <button onclick="earnPoints()">Earn 1000 Points</button></p>
+    <footer class="main-footer">
+        <div class="row container">
+            <div class="info-box">
+                <h4 class="footer-title">Your place to talk</h4>
+                <div class="language">
+                    <img src="../assets/images/flag.png" alt="">
+                    <span>English, India</span> <i class="bx bx-chevron-down"></i>
+                </div>
+
+                <div class="social-media">
+                    <a href="#" class="sm-link">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                    <a href="#" class="sm-link">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                    <a href="#" class="sm-link">
+                        <i class="bx bxl-facebook-square"></i>
+                    </a>
+                    <a href="#" class="sm-link">
+                        <i class="bx bxl-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="spacer"></div>
+            <div class="footer-links-group">
+                <h5 class="footer-title">Products</h5>
+                <a href="#" class="footer-link">Download</a>
+                <a href="#" class="footer-link">Nitro</a>
+                <a href="#" class="footer-link">Status</a>
+                <a href="#" class="footer-link">App Directory</a>
+                <a href="#" class="footer-link">New Mobile Experience</a>
+                <a href="#" class="footer-link">Download</a>
+                <a href="#" class="footer-link">Download</a>
+            </div>
+
+            <div class="footer-links-group">
+                <h5 class="footer-title">Company</h5>
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">Jobs</a>
+                <a href="#" class="footer-link">Brand</a>
+                <a href="#" class="footer-link">Newsroom</a>
+                <a href="#" class="footer-link">New Mobile Experience</a>
+                <a href="#" class="footer-link">Download</a>
+                <a href="#" class="footer-link">Download</a>
+            </div>
+
+            <div class="footer-links-group">
+                <h5 class="footer-title">Resourses</h5>
+                <a href="#" class="footer-link">College</a>
+                <a href="#" class="footer-link">Support</a>
+                <a href="#" class="footer-link">Safety</a>
+                <a href="#" class="footer-link">blog</a>
+                <a href="#" class="footer-link">Feedback</a>
+                <a href="#" class="footer-link">StreamKits</a>
+                <a href="#" class="footer-link">Creators</a>
+                <a href="#" class="footer-link">community</a>
+                <a href="#" class="footer-link">Developers</a>
+                <a href="#" class="footer-link">Gamming</a>
+                <a href="#" class="footer-link">Quests</a>
+            </div>
+
+            <div class="footer-links-group">
+                <h5 class="footer-title">Policies</h5>
+                <a href="#" class="footer-link">Terms</a>
+                <a href="#" class="footer-link">Privacy</a>
+                <a href="#" class="footer-link">Cookie Settings</a>
+                <a href="#" class="footer-link">Guidelines</a>
+                <a href="#" class="footer-link">Acknowledgements</a>
+                <a href="#" class="footer-link">Licenses</a>
+                <a href="#" class="footer-link">Company Information</a>
+            </div>
+
+            <div class="divider"></div>
+
+        </div>
+
+        <div class="row container remove-grid">
+            <a href="index.html" class="logo">
+                <img src="../assets/images/logo.svg" alt="">
+            </a>
+            <a href="" class="btn btn-small btn-brand">Login</a>
+        </div>
+
+        </div>
+    </footer>
+    <script src="nitro.js"></script>
+</body>
