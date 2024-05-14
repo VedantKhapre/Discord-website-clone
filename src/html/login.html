@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <section class="hero">
+        <header>
+            <div class="list">
+                <nav class="main-nav">
+                    <ul class="nav-list">
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Downloads</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="Nitro.html" class="nav-link">Nitro</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="Discover.html" class="nav-link">Discover</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="Safety.html" class="nav-link">Safety</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="About.html" class="nav-link">About</a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+            </div>
+        </header>
+    </section>
+
+    <div class="container">
+        <form action="../php/login.php" method="post">
+
+            <h2>Welcome Back</h2>
+            <h3>We're so excited to see you again!</h3>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" aria-describedby="emailHelp" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <p>Need an Account? <a href="./SignUp.html" class="New-link">Register</a></p>
+            <input type="submit" value="Log In">
+        </form>
+    </div>
+</body>
+
+</html>
