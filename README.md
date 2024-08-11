@@ -1,2 +1,2 @@
 # Front-End-websites
-Creating a simple website for the College Project
+Created a simple website for the College Project
